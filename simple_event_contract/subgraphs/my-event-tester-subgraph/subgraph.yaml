@@ -1,0 +1,26 @@
+specVersion: 1.0.0
+indexerHints:
+  prune: auto
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: EventTester
+    network: sepolia
+    source:
+      address: "0x566D7Dc4B882cFD01e03463fFDd963Dfc35237d5"
+      abi: EventTester
+      startBlock: 7612699
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - SimpleEvent
+      abis:
+        - name: EventTester
+          file: ./abis/EventTester.json
+      eventHandlers:
+        - event: SimpleEvent(indexed address,uint256)
+          handler: handleSimpleEvent
+      file: ./src/event-tester.ts

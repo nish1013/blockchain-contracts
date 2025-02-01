@@ -1,0 +1,62 @@
+# ==========================
+# General Ignored Files
+# ==========================
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore environment files
+.env
+.env.local
+.env.production
+.env.*.local
+
+# Ignore node_modules everywhere
+node_modules/
+
+# Ignore dependency lock files (use one if necessary)
+yarn.lock
+pnpm-lock.yaml
+
+# Ignore IDE/editor config
+.vscode/
+.idea/
+*.iml
+
+# Ignore log files
+*.log
+
+# ==========================
+# Hardhat & Solidity Ignore
+# ==========================
+
+# Hardhat build & cache files
+artifacts/
+cache/
+
+# Hardhat TypeChain files
+typechain/
+typechain-types/
+
+# Solidity coverage reports
+coverage/
+coverage.json
+
+# Hardhat Ignition default folder for local deployments
+ignition/deployments/chain-31337/
+
+# ==========================
+# Subgraph-related Ignore
+# ==========================
+
+# Ignore Subgraph generated files
+subgraphs/**/generated/
+subgraphs/**/build/
+subgraphs/**/data/
+
+# ==========================
+# Docker Ignore
+# ==========================
+
+# Ignore Docker override files
+docker-compose.override.yml
