@@ -1,5 +1,6 @@
 const hre = require('hardhat');
 
+// commnad -> npx hardhat run scripts/deploy.js --network sepolia
 async function main() {
   const EventTester = await hre.ethers.getContractFactory('EventTester');
   const contract = await EventTester.deploy();
